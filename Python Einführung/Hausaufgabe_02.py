@@ -60,21 +60,25 @@ move = [
     (0, -1)
 ]
 pos = [start]
-while pos:
-    x, y = pos[-1]
-    moved = False
-    for sx, sy in move:
-        gx = x + sx
-        gy = y + sy
-        if maze[gx, gy] == 0:
-            pos.append((gx, gy))
-            moved = True
-            break
-    if maze[gx, gy] == " Z":
-        break
 
-for wx, wy in pos:
-    maze[wx, wy] = "*"
+
+
+
+#while pos:
+ #   x, y = pos[-1]
+  #  moved = False
+   # for sx, sy in move:
+    #    gx = x + sx
+     #   gy = y + sy
+      #  if maze[gx, gy] == 0:
+       #     pos.append((gx, gy))
+        #    moved = True
+         #   break
+    #if maze[gx, gy] == " Z":
+     #   break
+
+#for wx, wy in pos:
+ #   maze[wx, wy] = "*"'
 
 print(ausgabe)
 

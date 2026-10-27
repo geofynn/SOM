@@ -29,9 +29,9 @@ def animate_game(x, y, start_pop=0.3, interval=200):
     grid = first_gen(x, y, start_pop)
     
     fig, ax = plt.subplots()
-    # cmap='binary' zeigt 0 als weiß und 1 als schwarz an
+    
     img = ax.imshow(grid, cmap='binary', interpolation='nearest')
-    ax.axis('off') # Versteckt die Achsen für eine sauberere Optik
+    ax.axis('off')
 
     def update(*args):
         nonlocal grid
@@ -39,7 +39,6 @@ def animate_game(x, y, start_pop=0.3, interval=200):
         img.set_array(grid)
         return [img]
 
-    # Erstellt die fortlaufende Animation
 
     ani = animation.FuncAnimation(fig, update, interval=interval, blit=True, cache_frame_data=False)
     plt.show()
